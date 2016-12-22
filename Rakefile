@@ -19,7 +19,7 @@ task :agencies do
 end
 
 task :inventories do
-  puts CSV.generate_line(['Name', 'Inventory URL', 'Inventory URL'])
+  puts CSV.generate_line(['Name', 'Inventory URL'])
 
   # https://docs.google.com/spreadsheets/d/1kBSjnw-HeZn7qUs0NRIdrnhhvDilWZ7kvnglJ9p4XDQ/edit#gid=0
   url = 'https://docs.google.com/spreadsheets/d/1kBSjnw-HeZn7qUs0NRIdrnhhvDilWZ7kvnglJ9p4XDQ/pub?gid=0&single=true&output=CSV'
@@ -37,7 +37,7 @@ task :inventories do
 
           xpaths = %w(csv xls).flat_map do |extension|
             xpath = %(//@href[contains(., ".#{extension}")][contains(., "ventory")])
-            [%(#{xpath}[not(contains(., "FR"))]), xpath]
+            [%(#{xpath}[not(contains(., "FR"))][not(contains(., "2015"))]), xpath]
           end + [
             '//@href[contains(., ".csv")][contains(., "OpenData")]',
             '//@href[contains(., ".csv")][contains(., "data_set")]',
@@ -99,7 +99,7 @@ task :inventories do
               end
             end
 
-            puts CSV.generate_line([row['Name'], inventory_urls[0], inventory_urls[1]])
+            puts CSV.generate_line([row['Name'], *inventory_urls])
           end
         rescue OpenURI::HTTPError => e
           $stderr.puts "#{url}: #{e}"
