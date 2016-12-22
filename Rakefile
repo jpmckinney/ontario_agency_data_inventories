@@ -1,3 +1,4 @@
+require 'cgi'
 require 'csv'
 require 'json'
 require 'set'
@@ -6,18 +7,32 @@ require 'open-uri/cached'
 require 'open_uri_redirections'
 require 'nokogiri'
 
+desc 'Outputs a TSV of agency names and accountability URLs'
 task :agencies do
   url = 'https://api.ontario.ca/api/drupal/page%2Fagency-accountability?fields=body'
   Nokogiri::HTML(JSON.load(open(url).read)['body']['und'][0]['value']).xpath('//h3/following-sibling::p//a').each do |a|
     url = a['href'].strip
-    if url.start_with?('/')
-      puts "#{a.text}\t#{url}"
-    else
-      # TODO
+    unless url.start_with?('/')
+      puts CSV.generate_line([a.text, url], col_sep: "\t")
     end
   end
 end
 
+desc 'Outputs any agency accountability pages on Ontario.ca that mention "data" or "inventory"'
+task :agencies_on_ontario_ca do
+  api_url = 'https://api.ontario.ca/api/drupal/page%2Fagency-accountability?fields=body'
+  Nokogiri::HTML(JSON.load(open(api_url).read)['body']['und'][0]['value']).xpath('//h3/following-sibling::p//a').each do |a|
+    url = a['href'].strip
+    if url.start_with?('/')
+      api_url = "https://api.ontario.ca/api/drupal/#{CGI.escape(url[1..-1])}?fields=body"
+      if Nokogiri::HTML(JSON.load(open(api_url).read)['body']['und'][0]['value']).text[/data|inventory/i]
+        puts "https://www.ontario.ca#{url}"
+      end
+    end
+  end
+end
+
+desc 'Outputs a CSV of agency names and inventory URLs'
 task :inventories do
   puts CSV.generate_line(['Name', 'Inventory URL'])
 
