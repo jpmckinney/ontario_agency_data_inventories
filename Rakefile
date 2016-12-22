@@ -19,6 +19,8 @@ task :agencies do
 end
 
 task :inventories do
+  puts CSV.generate_line(['Name', 'Inventory URL', 'Inventory URL'])
+
   # https://docs.google.com/spreadsheets/d/1kBSjnw-HeZn7qUs0NRIdrnhhvDilWZ7kvnglJ9p4XDQ/edit#gid=0
   url = 'https://docs.google.com/spreadsheets/d/1kBSjnw-HeZn7qUs0NRIdrnhhvDilWZ7kvnglJ9p4XDQ/pub?gid=0&single=true&output=CSV'
   CSV.parse(open(url).read, headers: true) do |row|
@@ -97,7 +99,7 @@ task :inventories do
               end
             end
 
-            puts CSV.generate_line([row['Name'], *inventory_urls])
+            puts CSV.generate_line([row['Name'], inventory_urls[0], inventory_urls[1]])
           end
         rescue OpenURI::HTTPError => e
           $stderr.puts "#{url}: #{e}"
