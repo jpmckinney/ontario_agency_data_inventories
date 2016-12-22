@@ -108,7 +108,11 @@ task :inventories do
               if href.start_with?('/')
                 "#{parsed.scheme}://#{parsed.host}#{href}"
               elsif !href.start_with?('http')
-                "#{url}#{href}"
+                if url.end_with?('/')
+                  "#{url}#{href}"
+                else
+                  "#{File.dirname(url)}/#{href}"
+                end
               else
                 href
               end
