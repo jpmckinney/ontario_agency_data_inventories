@@ -11,9 +11,9 @@ task :agencies do
   Nokogiri::HTML(JSON.load(open(url).read)['body']['und'][0]['value']).xpath('//h3/following-sibling::p//a').each do |a|
     url = a['href'].strip
     if url.start_with?('/')
-      # TODO
-    else
       puts "#{a.text}\t#{url}"
+    else
+      # TODO
     end
   end
 end
@@ -27,7 +27,7 @@ task :inventories do
     url = row.fetch('URL')
     if url
       if row.fetch('Format') == 'HTML'
-        inventory_url = url
+        puts CSV.generate_line([row['Name'], url])
       else
         begin
           # Avoid security, compression and redirection errors.
