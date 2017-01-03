@@ -41,12 +41,12 @@ task :inventories do
   CSV.parse(open(url).read, headers: true) do |row|
     url = row.fetch('URL')
     if url
-      if row.fetch('Format') == 'HTML'
+      if %w(CSV HTML XLSX).include?(row.fetch('Format'))
         puts CSV.generate_line([row['Name'], url])
       else
         begin
           # Avoid security, compression and redirection errors.
-          data = open(url.sub(/\Ahttps\b/, 'http'), 'Accept-Encoding' => 'plain', allow_redirections: :safe).read
+          data = open(url.sub(/\Ahttps\b/, 'http'), 'Accept-Encoding' => 'plain', 'User-Agent' => 'Mozilla', allow_redirections: :safe).read
 
           document = Nokogiri::HTML(data)
 
