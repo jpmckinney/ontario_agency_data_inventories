@@ -39,10 +39,11 @@ task :inventories do
   # https://docs.google.com/spreadsheets/d/1kBSjnw-HeZn7qUs0NRIdrnhhvDilWZ7kvnglJ9p4XDQ/edit#gid=0
   url = 'https://docs.google.com/spreadsheets/d/1kBSjnw-HeZn7qUs0NRIdrnhhvDilWZ7kvnglJ9p4XDQ/pub?gid=0&single=true&output=CSV'
   CSV.parse(open(url).read, headers: true) do |row|
+    name = row['Name'].force_encoding('utf-8').gsub(/\p{Space}+/, ' ').strip
     url = row.fetch('URL')
     if url
       if %w(CSV HTML XLSX).include?(row.fetch('Format'))
-        puts CSV.generate_line([row['Name'], url])
+        puts CSV.generate_line([name, url])
       else
         begin
           # Avoid security, compression and redirection errors.
@@ -118,7 +119,7 @@ task :inventories do
               end
             end
 
-            puts CSV.generate_line([row['Name'], *inventory_urls])
+            puts CSV.generate_line([name, *inventory_urls])
           end
         rescue OpenURI::HTTPError => e
           $stderr.puts "#{url}: #{e}"
