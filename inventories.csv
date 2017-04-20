@@ -1,12 +1,12 @@
 Name,Inventory URL
 AgriCorp,http://www.agricorp.com/SiteCollectionDocuments/Agricorp-OpenDataInventory-en.csv
 Agricultural Research Institute of Ontario,http://www.omafra.gov.on.ca/english/research/ario/ariodata.htm
-"Agriculture, Food and Rural Affairs Appeal Tribunal",http://www.omafra.gov.on.ca/english/tribunal/research/ario/datainventory.htm
+"Agriculture, Food and Rural Affairs Appeal Tribunal",http://www.omafra.gov.on.ca/english/tribunal/datainventory.htm
 Alcohol and Gaming Commission of Ontario,http://www.agco.on.ca/opendata/en/OpenData.csv
 Animal Care Review Board,http://www.slasto.gov.on.ca/en/documents/DataInv_english.csv
 Assessment Review Board,http://elto.gov.on.ca/wp-content/uploads/2016/10/ELTO-Open-Government-Data-Inventory_EN.csv
 Board of Negotiation,http://elto.gov.on.ca/wp-content/uploads/2016/10/ELTO-Open-Government-Data-Inventory_EN.csv
-Board of Negotiation (Environmental Protection Act),http://www.omafra.gov.on.ca/english/tribunal/research/ario/datainventory.htm
+Board of Negotiation (Environmental Protection Act),http://www.omafra.gov.on.ca/english/tribunal/datainventory.htm
 Cancer Care Ontario,https://www.cancercare.on.ca/common/pages/UserFile.aspx?fileId=362504
 Centennial Centre of Science and Technology (Ontario Science Centre),https://www.ontariosciencecentre.ca/Uploads/AboutUs/documents/Data_Inventory_Inventaire_des_donnees.xlsx
 Child and Family Services Review Board,http://www.sjto.gov.on.ca/documents/sjto/CSV-SJTO-Open%20Data%20Inventory.csv
@@ -42,7 +42,7 @@ Local Health Integration Network – Hamilton Niagara Haldimand Brant,http://www
 Local Health Integration Network – Mississauga Halton,http://www.mississaugahaltonlhin.on.ca/~/media/sites/mh/Primary Navigation/Accountability/Open Data/MH LHIN Open Data Consolidated 20160926-Final.xlsx?la=en
 Local Health Integration Network – North Simcoe Muskoka,http://www.nsmlhin.on.ca/~/media/sites/nsm/PrimaryNavigation/Accountability/NSM LHIN Data Inventory Bi Oct16.xlsx?la=en
 Local Health Integration Network – North West Ontario,http://www.northwestlhin.on.ca/~/media/sites/nw/Accountability/Open Data/North_West_LHIN_Data_Inventory.xlsx?la=en
-Local Health Integration Network – South East,http://www.southeastlhin.on.ca/~/media/sites/se/UploadedFiles/AccountabilityAgreements/South East LHIN Data Inventory En_Fr.csv?la=en
+Local Health Integration Network – South East,http://www.southeastlhin.on.ca/~/media/sites/se/UploadedFiles/OpenDataDirective/South East LHIN Data Inventory En_Fr.csv?la=en
 Local Health Integration Network – South West,http://www.southwestlhin.on.ca/~/media/sites/sw/PDF/OpenData/SouthWestLHINData Inventory_OCT2016.xlsx?la=en
 Local Health Integration Network – Toronto Central,http://www.torontocentrallhin.on.ca/~/media/sites/tc/New media folder/Accountability/MOU/Toronto Central LHIN Data Inventory.xlsx?la=en
 Local Health Integration Network – Waterloo Wellington,http://www.wwlhin.on.ca/~/media/sites/ww/files/accountability/opendata/LIST_2016NOV_WWLHIN_Open_Data_Posted.xlsx?la=en
@@ -51,7 +51,7 @@ Metropolitan Toronto Convention Centre Corporation,https://www.mtccc.com/wp-cont
 Nawiinginokiima Forest Management Corporation,http://nfmcforestry.ca/wp-content/uploads/2016/05/2016-NFMC-Data-Inventory-final.pdf
 Niagara Parks Commission,http://corporate.niagaraparks.com/wp-content/uploads/2016/09/Open-Dataset-list-inventory_TBS-approved-NPC.csv
 Northern Ontario Heritage Fund Corporation,http://nohfc.ca/sites/default/files/nohfc_og_data_inventory_-_published_december_2016_en.xlsx
-Office of the Conflict of Interest Commissioner,http://www.coicommissioner.gov.on.ca/blogs/media/2016/11/Data-Inventory-Table-for-Posting-Oct-2016-EN.pdf
+Office of the Conflict of Interest Commissioner,http://www.coicommissioner.gov.on.ca/blogs/media/2017/03/Table-for-Data-Inventory-Posting_v.-5_2017-03-21.pdf
 Office of the Employer Adviser,http://www.employeradviser.ca/wp-content/uploads/2016/11/Open-Government-OEA-Data-Inventory-2016_ENG.xlsx
 Office of the Fairness Commissioner,http://www.fairnesscommissioner.com/files_docs/content/xls/en/Data%20Inventory.xlsx
 Office of the Independent Police Review Director,http://www.oiprd.on.ca/EN/PDFs/OIPRD-OpenDataInventory-2016.06.25_E.csv
@@ -86,9 +86,9 @@ Owen Sound Transportation Company,http://www.ontarioferries.com/wp-content/uploa
 Pay Equity Hearings Tribunal,http://www.olrb.gov.on.ca/pec/peht/OpenData/PEHT_Data_Inventory_EN-FR.xlsx
 Pay Equity Office,http://www.payequity.gov.on.ca/en/AboutUs/Pages/open_gov_data_inventory.aspx
 Physician Payment Review Board,http://www.pprb.on.ca/en/Open/
-Province of Ontario Council for the Arts (Ontario Arts Council),http://www.arts.on.ca/AssetFactory.aspx?did=11804
+Province of Ontario Council for the Arts (Ontario Arts Council),http://arts.on.ca/oac/media/oac/Research%20and%20Impact/Open%20Data/OAC-Data-Inventory_Final_July2016.csv
 Public Service Grievance Board,http://www.psab.gov.on.ca/english/psgb/pdf doc english/psgb_open_data_posting_june_2016.pdf
-Royal Ontario Museum,https://www.rom.on.ca/sites/default/files/imce/policies2016/data-inventory-en.xlsx
+Royal Ontario Museum,https://www.rom.on.ca/en/about-us/reports-policy/open-data-directive
 Science North,https://sciencenorth.ca/about/corporate/accountability/open-data/downloads/SCN_TBS_Approved_Inventory.csv
 Social Benefits Tribunal,http://www.sjto.gov.on.ca/documents/sjto/CSV-SJTO-Open%20Data%20Inventory.csv
 Social Justice Tribunal Ontario,http://www.sjto.gov.on.ca/documents/sjto/CSV-SJTO-Open%20Data%20Inventory.csv
@@ -97,4 +97,4 @@ St. Lawrence Parks Commission,http://www.parks.on.ca/default/assets/File/Open%20
 Toronto Islands Residential Community Trust Corporation,http://torontoisland.org/land-trust/fileid/6714
 Trillium Gift of Life Network,https://www.giftoflife.on.ca/resources/csv/TGLN_Data_Inventory_July_2016_-_English_Web.csv
 Workplace Safety and Insurance Appeals Tribunal,http://www.wsiat.on.ca/OpenData/OpenData.htm
-Workplace Safety and Insurance Board,http://www.wsibopendata.ca/data/WSIBDatasetInventory.csv
+Workplace Safety and Insurance Board,http://www.wsibopendata.ca/data/WSIBDatasetInventory1.csv
