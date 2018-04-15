@@ -4,6 +4,8 @@ Ontario.ca allows you to [search](https://www.ontario.ca/search/data-catalogue) 
 
 Or, you can [download that information here](/inventories.csv).
 
+**Last updated: March 4, 2018**
+
 # Development
 
     bundle
